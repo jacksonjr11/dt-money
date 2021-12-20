@@ -1,80 +1,31 @@
 import { Dashboard } from "./components/Dashboard";
 import { Header } from "./components/Header";
 import { GlobalStyles } from "./styles/global";
-import { createServer } from 'miragejs';
-
-createServer({
-  routes() {
-    this.namespace = 'api';
-
-    this.get("/transactions", () => {
-      return [
-        {
-          id: 1,
-          title: 'Transactions',
-          amount: 400,
-          type: 'deposit',
-          category: 'Food',
-          createdAt: new Date(),
-        },
-        {
-          id: 2,
-          title: 'Transactions',
-          amount: -900,
-          type: 'withdraw',
-          category: 'Food',
-          createdAt: new Date(),
-        },
-        {
-          id: 2,
-          title: 'Transactions',
-          amount: 500,
-          type: 'deposit',
-          category: 'Food',
-          createdAt: new Date(),
-        },
-        {
-          id: 2,
-          title: 'Transactions',
-          amount: -500,
-          type: 'withdraw',
-          category: 'Food',
-          createdAt: new Date(),
-        },
-        {
-          id: 2,
-          title: 'Transactions',
-          amount: 500,
-          type: 'deposit',
-          category: 'Food',
-          createdAt: new Date(),
-        },  {
-          id: 2,
-          title: 'Transactions',
-          amount: -500,
-          type: 'withdraw',
-          category: 'Food',
-          createdAt: new Date(),
-        },
-        {
-          id: 2,
-          title: 'Transactions',
-          amount: 500,
-          type: 'deposit',
-          category: 'Food',
-          createdAt: new Date(),
-        },
-      ]
-    })
-  }
-})
+import Modal from "react-modal";
+import { useState } from "react";
 
 export function App() {
+  const [isNewTransactionModalOpen, setIsNewTransactionModalOpen] =
+    useState(false);
+
+  function handleOpenNewTransactionModal() {
+    setIsNewTransactionModalOpen(true);
+  }
+
+  function handleCloseNewTransactionModal() {
+    setIsNewTransactionModalOpen(false);
+  }
   return (
     <>
-      <Header/>
-      <Dashboard/>
-      <GlobalStyles/>
+      <Header onOpenNewTransactionModal={handleOpenNewTransactionModal} />
+      <Dashboard />
+      <Modal
+        isOpen={isNewTransactionModalOpen}
+        onRequestClose={handleCloseNewTransactionModal}
+      >
+        <h1>Teste</h1>
+      </Modal>
+      <GlobalStyles />
     </>
   );
 }
