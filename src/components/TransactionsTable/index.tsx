@@ -3,12 +3,12 @@ import { api } from "../../services/api";
 import { Container } from "./styles";
 
 interface propsTransactions {
-  id: number,
-  title: string,
-  amount: number,
-  type: string,
-  category: string,
-  createdAt: string,
+  id: number;
+  title: string;
+  amount: number;
+  type: string;
+  category: string;
+  createdAt: string;
 }
 
 export function TransactionsTable() {
@@ -17,7 +17,7 @@ export function TransactionsTable() {
   useEffect(() => {
     api("/transactions")
       .then((response) => {
-        setTransactions(response.data);
+        setTransactions(response.data.transactions);
       })
       .catch((err) => console.log(err));
   }, []);
@@ -35,11 +35,20 @@ export function TransactionsTable() {
         </thead>
         <tbody>
           {transactions.map((element, index) => (
-            <tr>
+            <tr key={index}>
               <td>{element.title}</td>
-              <td className={element.type === "withdraw" ? 'withdraw' : 'deposit'}>{element.amount}</td>
+              <td className={element.type}>
+                {new Intl.NumberFormat("pt-BR", {
+                  style: "currency",
+                  currency: "BRL",
+                }).format(element.amount)}
+              </td>
               <td>{element.category}</td>
-              <td>{element.createdAt}</td>
+              <td>
+                {new Intl.DateTimeFormat("pt-BR").format(
+                  new Date(element.createdAt)
+                )}
+              </td>
             </tr>
           ))}
         </tbody>
