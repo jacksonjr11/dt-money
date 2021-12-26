@@ -2,8 +2,12 @@ import { Container } from "./styles";
 import incomeImg from "../../assets/income.svg";
 import outcomeImg from "../../assets/outcome.svg";
 import totalImg from "../../assets/total.svg";
+import { useContext } from "react";
+import { TransactionContext } from "../../TransactionsContext";
 
 export function Summary() {
+  const { transactions } = useContext(TransactionContext);
+
   return (
     <Container>
       <div>
@@ -22,7 +26,7 @@ export function Summary() {
       </div>
       <div className="highlight-background">
         <header>
-          <p>Entradas</p>
+          <p>Total</p>
           <img src={totalImg} alt="Total" />
         </header>
         <strong>R$500,00</strong>
