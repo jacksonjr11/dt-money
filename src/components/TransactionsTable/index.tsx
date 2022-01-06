@@ -16,23 +16,29 @@ export function TransactionsTable() {
           </tr>
         </thead>
         <tbody>
-          {transactions.map((element, index) => (
-            <tr key={index}>
-              <td>{element.title}</td>
-              <td className={element.type}>
-                {new Intl.NumberFormat("pt-BR", {
-                  style: "currency",
-                  currency: "BRL",
-                }).format(element.amount)}
-              </td>
-              <td>{element.category}</td>
-              <td>
-                {new Intl.DateTimeFormat("pt-BR").format(
-                  new Date(element.createdAt)
-                )}
-              </td>
+          {transactions.length ? (
+            transactions.map((element, index) => (
+              <tr key={index}>
+                <td>{element.title}</td>
+                <td className={element.type}>
+                  {new Intl.NumberFormat("pt-BR", {
+                    style: "currency",
+                    currency: "BRL",
+                  }).format(element.amount)}
+                </td>
+                <td>{element.category}</td>
+                <td>
+                  {new Intl.DateTimeFormat("pt-BR").format(
+                    new Date(element.createdAt)
+                  )}
+                </td>
+              </tr>
+            ))
+          ) : (
+            <tr>
+              <td colSpan={4} style={{textAlign: 'center'}}>Não há transações cadastradas</td>
             </tr>
-          ))}
+          )}
         </tbody>
       </table>
     </Container>
