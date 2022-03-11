@@ -1,46 +1,56 @@
-# Getting Started with Create React App
+<h1 align="center">
+    DT - Money, your finance manager
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/jacksonjr11/dt-money.svg">
 
-## Available Scripts
+  <a href="https://www.codacy.com/app/jacksonjr11/dt-money?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jacksonjr11/dt-money&amp;utm_campaign=Badge_Grade">
+    <img alt="Codacy grade" src="https://img.shields.io/codacy/grade/4997e01df18f4441aae384fc60aa4daa.svg">
+  </a>
 
-In the project directory, you can run:
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/jacksonjr11/dt-money.svg">
+  <a href="https://github.com/jacksonjr11/dt-money/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/jacksonjr11/dt-money.svg">
+  </a>
 
-### `yarn start`
+  <a href="https://github.com/jacksonjr11/dt-money/issues">
+    <img alt="Repository issues" src="https://img.shields.io/github/issues/jacksonjr11/dt-money.svg">
+  </a>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  <img alt="GitHub" src="https://img.shields.io/github/license/jacksonjr11/dt-money.svg">
+</p>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<h4 align="center">
+  This is a system for manager your finances.
+</h4>
 
-### `yarn test`
+<p align="center">
+  <a href="#rocket-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#memo-license">License</a>
+</p>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![App Screenshot](https://ik.imagekit.io/jackson/dt-money.png?ik-sdk-version=javascript-1.4.3&updatedAt=1647038060415)
+<p align="center">
+  <a href="https://dtmoney-jackson.netlify.app/" target="_blank">
+    <img alt="Demo on Netlify" src="https://res.cloudinary.com/lukemorales/image/upload/v1599785319/readme_logos/demo_on_netlify_umjmch.png">
+  </a>
+</p>
 
-### `yarn build`
+## :rocket: Technologies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [ReactJS](https://reactjs.org/)
+- [Typescript][ts]
+- [styled-components](https://www.styled-components.com/)
+- [Mirage.js](https://miragejs.com/)
+- [VS Code][vscode] with [EditorConfig][vceditconfig] and [ESLint][vceslint]
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Made with ♥ by Jackson Augusto :wave: [Get in touch!](https://www.linkedin.com/in/jacksonaugusto/)
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+[ts]: https://www.typescriptlang.org
+[vscode]: https://code.visualstudio.com/
+[yarn]: https://yarnpkg.com/
+[vceditconfig]: https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig
+[vceslint]: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
